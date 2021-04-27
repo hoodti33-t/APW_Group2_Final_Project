@@ -1,3 +1,10 @@
+//Check the users answers 
+//
+//Credit to Kevin Briggs YouTube: “Java Script Tutorial: Make a quiz
+//
+//@author Timothy Hood, Taylor Maiorini, Fahima Khashem
+//
+//version 4/26/21
 function check(){
 
 	var question1 = document.quiz.question1.value;
@@ -7,26 +14,27 @@ function check(){
 	var correct = 0;
 
 
-	if (question1 == "28") {
-		correct++;
+	if (question1 == "28") { //Question 1's answer ,
+		correct++; //If got correct increases score by 1
 }
-	if (question2 == "4") {
-		correct++;
+	if (question2 == "4") { // Question 2's answer
+		correct++; //If got correct increases score by 1
 }	
-	if (question3 == "78") {
-		correct++;
+	if (question3 == "78") { //Question 3's answer
+		correct++; //If got correct increases score by 1
 	}
 
-	if (question2 == "96") {
-		correct++;
+	if (question4 == "96") { //Question 4's answer
+		correct++; //If got correct increases score by 1
 	}
 	
 	
-	var pictures = ["img/win.gif", "img/meh.jpeg", "img/lose.gif"];
-	var messages = ["WOW! You're Smart", "I seen better", "", "Go back to school"];
+	var pictures = ["img/win.gif", "img/meh.jpeg", "img/lose.gif"]; //Images based on their score
+	var messages = ["WOW! You're Smart", "So close", "I have seen better", "Go back to school"]; //The feedback after their 
+	//scores are revealed
 	var score;
 
-	
+	//If statements to tally the users score
 	if (correct == 4) {
 		score = 0;
 	}
@@ -45,7 +53,7 @@ function check(){
 
 
 	document.getElementById("after_submit").style.visibility = "visible";
-
+	//What is displayed after they submit
 	document.getElementById("message").innerHTML = messages[score];
 	document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
 	document.getElementById("picture").src = pictures[score];

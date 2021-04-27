@@ -1,0 +1,19 @@
+{
+  "name": "apw_group2_final_project",
+  "version": "1.0.0",
+  "description": "/**\r *Authors Timothy Hood, Taylor Maiorini, Fahima Khashem\r *\r *Version 1.0\r *\r */",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoodti33-t/APW_Group2_Final_Project.git"
+  },
+  "author": "Timothy Hood, Fahima Kashem, Taylor Maiorini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoodti33-t/APW_Group2_Final_Project/issues"
+  },
+  "homepage": "https://github.com/hoodti33-t/APW_Group2_Final_Project#readme"
+}

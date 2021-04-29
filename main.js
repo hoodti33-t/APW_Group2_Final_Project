@@ -5,6 +5,19 @@
 //@author Timothy Hood, Taylor Maiorini, Fahima Khashem
 //
 //version 4/26/21
+//Check the users answers 
+//
+//Credit to Kevin Briggs YouTube: “Java Script Tutorial: Make a quiz
+//
+//@author Timothy Hood, Taylor Maiorini, Fahima Khashem
+//
+var http = require("http");
+let express = require("express");
+//const host = 'localhost';
+//const port = 6900;
+let dbManager = require('./dbManager');
+let main = express();
+var ObjectID = require('mongodb').ObjectId;
 function check(){
 
 	var question1 = document.quiz.question1.value;
@@ -58,3 +71,14 @@ function check(){
 	document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
 	document.getElementById("picture").src = pictures[score];
 	}
+	main.listen(6900, async ()=> {
+        //start and wait for the DB connection
+        try{
+            await dbManager.get("finalProject");
+        } catch (e){
+            console.log(e.message);
+        }
+
+        console.log("Server is running...");
+
+    });
